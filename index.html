@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>生肖招财机</title>
+<title>十二生肖招财宝</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='1' y='1' width='22' height='22' rx='4' fill='%23f5c542'/%3E%3Ctext x='12' y='17' font-size='14' text-anchor='middle' fill='%23804d00'%3E金%3C/text%3E%3C/svg%3E">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
@@ -49,10 +49,18 @@
   #auth-row button { margin-top:8px; padding:7px 26px; border:none; border-radius:8px;
     background:linear-gradient(180deg,#f7d15e,#e0a92e); color:#5a3800; font-size:14px; cursor:pointer; }
   .pmsg { font-size:12px; color:#ff9d8a; text-align:center; min-height:16px; margin-top:6px; }
+  /* ===== 免责声明 ===== */
+  #disclaimer { position:fixed; left:0; right:0; bottom:0; z-index:20;
+    text-align:center; font-size:10px; line-height:1.5; color:rgba(200,208,230,0.6);
+    background:rgba(8,11,24,0.55); padding:4px 12px; pointer-events:none;
+    letter-spacing:0.2px; }
 </style>
 </head>
 <body>
 <canvas id="game" width="540" height="960"></canvas>
+
+<!-- ===== 免责声明 ===== -->
+<div id="disclaimer">演示小游戏：全部金币仅为虚拟数值，无任何实际价值，不构成赌博，仅供娱乐。</div>
 
 <!-- ===== 管理员面板 DOM ===== -->
 <div id="panel-mask">
@@ -102,7 +110,7 @@
 <script>
 "use strict";
 /* =====================================================================
- * 生肖招财机 —— 单文件投币老虎机
+ * 十二生肖招财宝 —— 单文件投币老虎机
  * 玩法：点击投币 → 金币从顶部中央掉落 → 底部漏斗水平匀速移动
  * 接住 → 9格兽首滚动停止 → 判定 3横 / 2对角 三同中奖
  * ===================================================================== */
@@ -547,7 +555,7 @@ function drawTopBar(){
   const tg = ctx.createLinearGradient(0, 20, 0, 58);
   tg.addColorStop(0, "#ffe9a8"); tg.addColorStop(0.5, "#f5c542"); tg.addColorStop(1, "#d99a1f");
   ctx.fillStyle = tg;
-  ctx.fillText("生肖招财机", W/2, 30);
+  ctx.fillText("十二生肖招财宝", W/2, 30);
   // 副标题小字
   ctx.font = "11px 'PingFang SC','Microsoft YaHei',sans-serif";
   ctx.fillStyle = "rgba(255,230,170,0.55)";
